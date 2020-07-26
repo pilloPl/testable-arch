@@ -1,4 +1,4 @@
-package io.pillopl.testablearch.ex1;
+package io.pillopl.testablearch.ex2;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

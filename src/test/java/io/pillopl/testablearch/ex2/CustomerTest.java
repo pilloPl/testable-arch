@@ -1,4 +1,4 @@
-package io.pillopl.testablearch.ex1;
+package io.pillopl.testablearch.ex2;
 
 import org.junit.jupiter.api.Test;
 

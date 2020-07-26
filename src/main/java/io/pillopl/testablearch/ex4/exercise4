@@ -1,0 +1,3 @@
+Take a look at AsyncEventsEmission.java class
+
+Try to implement those two test. Remember, events emission happens after the transaction is succesful (in a separate thread). Hint: there is a library called Awaitility on the classpath.

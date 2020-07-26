@@ -1,6 +1,4 @@
-package io.pillopl.testablearch.ex1;
-
-import org.springframework.stereotype.Component;
+package io.pillopl.testablearch.ex2;
 
 //1. Refactor to object-oriented model - separate rules from the process
 //2. Make the integration test pass (happy path for rental process)

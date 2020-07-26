@@ -1,4 +1,4 @@
-package io.pillopl.testablearch.ex1;
+package io.pillopl.testablearch.ex2;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
