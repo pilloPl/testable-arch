@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.pillopl.testablearch.ex3.application.ApplyForCardService;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,6 +32,12 @@ class CreditCardApplicationController {
                 .map(card -> ok().build())
                 .orElse(status(FORBIDDEN).build());
     }
+
+    @GetMapping
+    ResponseEntity string() {
+        return ok("OK");
+    }
+
 }
 
 /**
