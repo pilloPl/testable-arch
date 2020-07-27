@@ -1,2 +1,9 @@
-1. What is the responsibility of LeaveService class?
-2. Think about how to improve that design (how many new classes would you introduce?)
+Take a look at RentCarService class
+
+1. Refactor to object-oriented model - separate rules from the process
+2. Make the integration test (RentCarServiceIntegrationTest) pass (happy path for rental process)
+ - you might need to correct some bugs :)
+3. Make the unit tests for the customer object model pass (CustomerTest)
+ - you need to implement some new methods (and create them)
+4. What happens if database/application crashes after sending an e-mail? How to prevent that? (32nd line in RentCarService class)
+5. Do I want to test if the e-mail gets sent after not successful rental? (34th line in RentCarService class)
