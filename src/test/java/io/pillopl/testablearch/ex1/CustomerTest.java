@@ -46,8 +46,7 @@ public class CustomerTest {
 
     private boolean customerRentsACar(Customer customer) {
         //for the time being the rule result is true/false - could be Result class or exception throwing
-        return customer.rentACar();
-        //return false;
+        return false;
     }
 
     private Customer aCustomerWithRentals(int numberOfRentals) {
