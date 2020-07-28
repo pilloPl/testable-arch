@@ -1,6 +1,8 @@
 package io.pillopl.testablearch.ex3.ui;
 
 
+import org.awaitility.Awaitility;
+import org.awaitility.Duration;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,12 +41,15 @@ class AsyncEventsEmission {
         cardApplicationController.applyForCard(new CardApplication("70345678"));
 
         //expect
-        //..
+        Awaitility
+                .await()
+                .atMost(Duration.FIVE_SECONDS)
+                .until(() -> emittedEventWas("card-granted"));
     }
 
     boolean emittedEventWas(String eventName) {
-        //how to check that?
-        return false;
+        Message<?> msg = events.poll();
+        return msg != null && ((String) msg.getPayload()).contains(eventName);
     }
 
     @Test
@@ -53,7 +58,10 @@ class AsyncEventsEmission {
         cardApplicationController.applyForCard(new CardApplication("61345678"));
 
         //expect
-        //..
+        Awaitility
+                .await()
+                .atMost(Duration.FIVE_SECONDS)
+                .until(() -> emittedEventWas("card-application-rejected"));
     }
 
 }
