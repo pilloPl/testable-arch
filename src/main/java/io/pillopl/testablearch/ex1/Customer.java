@@ -48,11 +48,4 @@ public class Customer {
     }
 
 
-    public boolean rentACar() {
-        if(numberOfRentals < 3) {
-            numberOfRentals++;
-            return true;
-        }
-        return false;
-    }
 }

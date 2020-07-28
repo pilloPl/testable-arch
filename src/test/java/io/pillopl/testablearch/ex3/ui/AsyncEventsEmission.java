@@ -41,10 +41,7 @@ class AsyncEventsEmission {
         cardApplicationController.applyForCard(new CardApplication("70345678"));
 
         //expect
-        Awaitility
-                .await()
-                .atMost(Duration.FIVE_SECONDS)
-                .until(() -> emittedEventWas("card-granted"));
+        //..
     }
 
     boolean emittedEventWas(String eventName) {
@@ -58,10 +55,7 @@ class AsyncEventsEmission {
         cardApplicationController.applyForCard(new CardApplication("61345678"));
 
         //expect
-        Awaitility
-                .await()
-                .atMost(Duration.FIVE_SECONDS)
-                .until(() -> emittedEventWas("card-application-rejected"));
+        //..
     }
 
 }
