@@ -1,5 +1,6 @@
 package io.pillopl.testablearch.ex2.acl;
 
+import io.pillopl.testablearch.ex2.acl.toggles.NewModelToggles;
 import io.pillopl.testablearch.ex2.bigballofmud.BigBallOfMud;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -19,7 +20,7 @@ public class SanityFeatureToggleTest {
 
     @Test
     public void makeSureNewModelIsDisabledOnProd() {
-
+ 
     }
 
 }

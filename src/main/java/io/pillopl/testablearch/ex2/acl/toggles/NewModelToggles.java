@@ -1,6 +1,7 @@
 package io.pillopl.testablearch.ex2.acl.toggles;
 
 import org.togglz.core.Feature;
+import org.togglz.core.annotation.EnabledByDefault;
 import org.togglz.core.annotation.Label;
 import org.togglz.core.context.FeatureContext;
 

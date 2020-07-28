@@ -49,12 +49,6 @@ public class BlackBoxScenarios {
     @Autowired
     QueueListener queueListener;
 
-
-    /**
-     *  Task #1: Implement those two tests (regularPatronCannotHoldRestrictedBooks and researcherPatronCanHoldRestrictedBooks):
-     *      a) observe behaviors after a command (exception/success) and a query (results/empty results)
-     *      b) automate them in tests
-     */
     @Test
     public void regularPatronCannotHoldRestrictedBooks() {
 

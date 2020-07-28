@@ -1,6 +1,5 @@
 1. Implement those two tests (regularPatronCannotHoldRestrictedBooks and researcherPatronCanHoldRestrictedBooks) in BlackBoxScenarios.java. Feel free to use methods already provide in that class - lot of useful stuff there
 
-
 2. Implement SanityFeatureToggleTest - make it green. How we are going to make sure that after a deploy we use old model? (or new one depending on our needs)?
 
 3. How we are going to manipulate toggle settings for testing purposes? How to make it enabled/disabled for a given scenario?
