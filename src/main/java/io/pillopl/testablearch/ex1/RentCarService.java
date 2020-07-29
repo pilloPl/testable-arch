@@ -6,6 +6,9 @@ package io.pillopl.testablearch.ex1;
 //4. What happens if database/application crashes after sending an e-mail? How to prevent that?
 //5. Do I want to test if the e-mail gets sent after not successful rental?
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class RentCarService {
 
     private final CustomerRepository customerRepository;
@@ -20,8 +23,7 @@ public class RentCarService {
         Customer customer = customerRepository.findById(customerId).orElseThrow(IllegalArgumentException::new);
 
         //can only have up to 3 rentals
-        if (customer.getNumberOfRentals() < 3) {
-            customer.setNumberOfRentals(customer.getNumberOfRentals() + 1);
+        if (customer.rentACar()) {
             //if managed to rent - send a nice e-mail
             //what happens if database crashes after sending an e-mail?
             emailService.sendEmail(customer.getName(), "You got it");

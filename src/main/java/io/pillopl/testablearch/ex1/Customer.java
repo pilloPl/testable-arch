@@ -26,26 +26,20 @@ public class Customer {
         return id;
     }
 
-    public void setId(Long id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-
     public int getNumberOfRentals() {
         return numberOfRentals;
     }
 
-    public void setNumberOfRentals(int numberOfRentals) {
-        this.numberOfRentals = numberOfRentals;
+    public boolean rentACar() {
+        if (numberOfRentals < 3) {
+            numberOfRentals++;
+            return true;
+        }
+        return false;
     }
-
-
 }
