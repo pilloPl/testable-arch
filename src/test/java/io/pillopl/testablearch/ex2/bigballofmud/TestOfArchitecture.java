@@ -11,12 +11,5 @@ import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 class TestOfArchitecture {
 
 
-    @ArchTest
-    public static ArchRule layers = layeredArchitecture()
-            .layer("oldmodel").definedBy("io.pillopl.testablearch.ex2.bigballofmud..")
-            .layer("newmodel").definedBy("io.pillopl.testablearch.ex2.newmodel..")
-            .layer("acl").definedBy("io.pillopl.testablearch.ex2.acl..")
-            .whereLayer("oldmodel").mayOnlyBeAccessedByLayers("acl");
-
 
 }

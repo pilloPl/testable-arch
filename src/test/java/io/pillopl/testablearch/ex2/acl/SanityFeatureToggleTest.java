@@ -20,15 +20,10 @@ public class SanityFeatureToggleTest {
     @Autowired
     FeatureManager manager;
 
-    @Rule
-    TogglzRule togglzRule = TogglzRule.allDisabled(NewModelToggles.class);
-
     @Test
     public void makeSureNewModelIsDisabledOnProd() {
 
-        togglzRule.disable(NewModelToggles.RECONCILE_NEW_MODEL);
 
-        assertThat(manager.getFeatureState(NewModelToggles.RECONCILE_AND_USE_NEW_MODEL).isEnabled()).isFalse();
     }
 
 }

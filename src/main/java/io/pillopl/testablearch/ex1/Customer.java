@@ -6,6 +6,13 @@ import javax.persistence.Id;
 @Entity
 public class Customer {
 
+    @Id
+    private Long id;
+
+    private String name;
+
+    private int numberOfRentals;
+
     Customer() {
     }
 
@@ -15,12 +22,17 @@ public class Customer {
         this.numberOfRentals = numberOfRentals;
     }
 
-    @Id
-    private Long id;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    private String name;
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    private int numberOfRentals;
+    public void setNumberOfRentals(int numberOfRentals) {
+        this.numberOfRentals = numberOfRentals;
+    }
 
     public Long getId() {
         return id;
@@ -35,11 +47,4 @@ public class Customer {
         return numberOfRentals;
     }
 
-    public boolean rentACar() {
-        if (numberOfRentals < 3) {
-            numberOfRentals++;
-            return true;
-        }
-        return false;
-    }
 }

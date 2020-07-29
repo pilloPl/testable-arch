@@ -8,7 +8,6 @@ package io.pillopl.testablearch.ex1;
 
 import org.springframework.stereotype.Component;
 
-@Component
 public class RentCarService {
 
     private final CustomerRepository customerRepository;
@@ -23,7 +22,8 @@ public class RentCarService {
         Customer customer = customerRepository.findById(customerId).orElseThrow(IllegalArgumentException::new);
 
         //can only have up to 3 rentals
-        if (customer.rentACar()) {
+        if (customer.getNumberOfRentals() < 3) {
+            customer.setNumberOfRentals(customer.getNumberOfRentals() + 1);
             //if managed to rent - send a nice e-mail
             //what happens if database crashes after sending an e-mail?
             emailService.sendEmail(customer.getName(), "You got it");

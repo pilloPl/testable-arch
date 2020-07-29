@@ -45,8 +45,8 @@ class AsyncEventsEmission {
     }
 
     boolean emittedEventWas(String eventName) {
-        Message<?> msg = events.poll();
-        return msg != null && ((String) msg.getPayload()).contains(eventName);
+        //.. how to check that?
+        return false;
     }
 
     @Test
